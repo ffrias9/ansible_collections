@@ -33,7 +33,6 @@ ffrias9.awx_jobs.job:
   job: 23
 '''
 
-import requests
 from ansible.module_utils.basic import AnsibleModule
 
 
@@ -53,6 +52,11 @@ def main():
 
     auth = (module.params['user'], module.params['password'])
     url = module.params['url'] + "/api/v" + module.params['api_v'] + "/workflow_job_templates/" + module.params['job'] + "/launch/"
+
+    try:
+        import requests
+    except:
+        module.fail_json(msg='Python library "requests" not found. Please, install it manually.')
 
     result = requests.post(url, auth=auth)
 

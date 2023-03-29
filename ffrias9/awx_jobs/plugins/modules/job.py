@@ -37,7 +37,6 @@ ffrias9.awx_jobs.job:
   credential: 9
 '''
 
-import requests
 from ansible.module_utils.basic import AnsibleModule
 
 
@@ -60,6 +59,11 @@ def main():
     url = module.params['url'] + "/api/v" + module.params['api_v'] + "/job_templates/" + module.params['job'] + "/launch/"
     credential = module.params['credential']
     payload = {"extra_vars": {}, "credentials": [credential]}
+
+    try:
+        import requests
+     except:
+        module.fail_json(msg='Python library "requests" not found. Please, install it manually.')
 
     result = requests.post(url, auth=auth, json=payload)
 

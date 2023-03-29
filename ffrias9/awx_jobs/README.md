@@ -27,21 +27,21 @@ You need to create a playbook that may be briefly similar to this one
     # For execute a job
     - name: Execute AWX job
       ffrias9.awx_jobs.job:
-	url: "{{ url }}"
-	api_v: "{{ api_v }}"
-	user: "{{ user }}"
-	password: "{{ passwd }}"
-	job: "{{ j_id }}"
-	credential: "{{ cred_id }}"
+        url: "{{ url }}"
+        api_v: "{{ api_v }}"
+        user: "{{ user }}"
+        password: "{{ passwd }}"
+        job: "{{ j_id }}"
+        credential: "{{ cred_id }}"
 
     # For execute a workflow
     - name: Executa a workflow template
       ffrias9.awx_jobs.workflow:
-	url: "{{ url }}"
-	api_v: "{{ api_v }}"
-	user: "{{ user }}"
-	password: "{{ passwd }}"
-	job: "{{ w_id }}"
+        url: "{{ url }}"
+        api_v: "{{ api_v }}"
+        user: "{{ user }}"
+        password: "{{ passwd }}"
+        job: "{{ w_id }}"
 ```
 
 Variable file content:
