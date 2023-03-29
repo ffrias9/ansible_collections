@@ -9,7 +9,7 @@ ansible-galaxy collection install ffrias9.awx_jobs
 ```
 
 ## Requirements
-The requirements are specified in [requeriments.txt](https://raw.githubusercontent.com/ffrias9/ansible_collections/main/ffrias9/awx_jobs/docs/requeriments.txt)
+The requirements are specified in [requeriments.txt](https://raw.githubusercontent.com/ffrias9/ansible_collections/main/ffrias9/awx_jobs/docs/requirements.txt)
 It is important to have the python "requests" library installed:
 ```sh
 python3 -m pip install requests

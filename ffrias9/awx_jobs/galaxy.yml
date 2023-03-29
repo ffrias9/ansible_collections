@@ -3,7 +3,7 @@ namespace: ffrias9
 
 name: awx_jobs
 
-version: 1.6.0
+version: 1.6.1
 
 authors: Francisco José Frías Martín <fp_franciscofrias@ciudadjardin.org>
 
