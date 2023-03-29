@@ -62,7 +62,7 @@ def main():
 
     try:
         import requests
-     except:
+    except:
         module.fail_json(msg='Python library "requests" not found. Please, install it manually.')
 
     result = requests.post(url, auth=auth, json=payload)
